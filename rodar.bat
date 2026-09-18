@@ -8,8 +8,15 @@ if errorlevel 1 (
   exit /b 1
 )
 
+echo Rodando testes...
+dotnet test --nologo -v q
+if errorlevel 1 (
+  echo Falha nos testes.
+  exit /b 1
+)
+
 echo Compilando ClientesDemo...
-dotnet build "ClientesDemo\ClientesDemo.csproj" -c Release
+dotnet build "ClientesDemo\ClientesDemo.csproj" -c Release --nologo
 if errorlevel 1 (
   echo Falha na compilacao.
   exit /b 1

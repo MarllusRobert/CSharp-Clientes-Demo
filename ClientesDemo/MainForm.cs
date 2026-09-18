@@ -20,8 +20,8 @@ public sealed class MainForm : Form, IClienteView
     {
         BuildUi();
 
-        var dbPath = Path.Combine(AppContext.BaseDirectory, "data", "clientes.db");
-        var repo = new SqliteClienteRepository(dbPath);
+        var (repo, providerLabel) = RepositoryFactory.Create();
+        Text = $"C# WinForms Demo — Cadastro de Clientes (MVP) · {providerLabel}";
         _presenter = new ClientePresenter(this, repo);
 
         Load += (_, _) => _presenter.Inicializar();
@@ -109,7 +109,7 @@ public sealed class MainForm : Form, IClienteView
         });
         header.Controls.Add(new Label
         {
-            Text = "C# · WinForms · MVP · SQLite · SQL parametrizado",
+            Text = "C# · WinForms · MVP · SQLite / SQL Server",
             ForeColor = Color.FromArgb(200, 220, 220),
             AutoSize = true,
             Location = new Point(20, 42),
