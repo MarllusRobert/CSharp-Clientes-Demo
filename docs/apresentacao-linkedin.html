@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C# WinForms Clientes Demo — Apresentação LinkedIn</title>
+  <style>
+    :root { --ink:#15231c; --muted:#5d6e65; --accent:#1f6b57; --card:#fff; --line:#d7e0db; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, rgba(31,107,87,.16), transparent 40%), linear-gradient(160deg, #f8fbf9, #e9efeb);
+    }
+    .wrap { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 56px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; font-weight: 800; }
+    h1 { margin: 8px 0 10px; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; }
+    .lead { color: var(--muted); font-size: 1.05rem; max-width: 42rem; }
+    .card { margin-top: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+    h2 { margin: 0 0 10px; font-size: 1.1rem; color: var(--accent); }
+    ul { margin: 0; padding-left: 1.1rem; }
+    li { margin: 6px 0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .mini { background: #f7faf8; border: 1px solid var(--line); border-radius: 14px; padding: 14px; }
+    .mini strong { display: block; margin-bottom: 6px; }
+    .copy { margin-top: 18px; white-space: pre-wrap; background: #122019; color: #e7f2ec; border-radius: 16px; padding: 16px; line-height: 1.45; }
+    a { color: var(--accent); font-weight: 700; }
+    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Portfolio técnico · LinkedIn</p>
+    <h1>C# WinForms — Cadastro de Clientes (MVP)</h1>
+    <p class="lead">
+      Demo desktop em <strong>C# / .NET 8</strong> com WinForms, padrão MVP, interface de repositório e SQLite —
+      alinhada a vagas de manutenção de sistemas legados .NET.
+    </p>
+
+    <section class="card">
+      <h2>O que o projeto mostra</h2>
+      <ul>
+        <li>WinForms com formulário + DataGridView</li>
+        <li>CRUD completo com SQL parametrizado</li>
+        <li>Arquitetura MVP (View / Presenter / Repository)</li>
+        <li>Interface <code>IClienteRepository</code> (OOP)</li>
+        <li>Seed automático na primeira execução</li>
+      </ul>
+    </section>
+
+    <div class="grid">
+      <div class="mini"><strong>Stack</strong> C# · .NET 8 · WinForms · SQLite · MVP</div>
+      <div class="mini"><strong>Como rodar</strong> Duplo clique em <code>rodar.bat</code></div>
+      <div class="mini"><strong>GitHub</strong> <a href="https://github.com/MarllusRobert/CSharp-Clientes-Demo">github.com/MarllusRobert/CSharp-Clientes-Demo</a></div>
+      <div class="mini"><strong>Demo em 1 min</strong> Abrir → listar → Novo → Salvar → editar/excluir</div>
+    </div>
+
+    <section class="card">
+      <h2>Texto para colar no LinkedIn</h2>
+      <div class="copy">Acabei de publicar um demo técnico em C# / .NET 8 (WinForms).
+
+O projeto é um cadastro de clientes desktop com:
+• padrão MVP (View + Presenter + Repository)
+• interface e OOP
+• SQLite com SQL parametrizado
+• CRUD completo
+
+Objetivo: reforçar prática em desktop .NET — stack clássica ainda muito usada em sistemas legados — e deixar um artefato claro para entrevistas.
+
+🔗 Código: https://github.com/MarllusRobert/CSharp-Clientes-Demo
+
+#CSharp #DotNet #WinForms #MVP #SQLite #Desktop #Portfolio #Desenvolvedor</div>
+    </section>
+  </div>
+</body>
+</html>
